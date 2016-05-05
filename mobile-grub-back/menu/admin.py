@@ -1,15 +1,12 @@
 from django.contrib import admin
-from .models import Sample, Page, Item
+from .models import MenuItem, Category
 
-class SampleAdmin(admin.ModelAdmin):
+class MenuItemAdmin(admin.ModelAdmin):
     pass
 
-class PageAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     pass
 
-class ItemAdmin(admin.ModelAdmin):
-    pass
 
-admin.site.register(Sample, SampleAdmin)
-admin.site.register(Page, PageAdmin)
-admin.site.register(Item, ItemAdmin)
+admin.site.register(MenuItem, MenuItemAdmin)
+admin.site.register(Category, CategoryAdmin)
