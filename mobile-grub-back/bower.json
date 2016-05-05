@@ -1,0 +1,10 @@
+{
+  "name": "mobile-grub-back",
+  "version": "1.0.0",
+  "devDependencies": {
+    "angular": "~1.4.1",
+    "angular-route": "~1.4.1",
+    "angular-resource": "~1.4.1",
+    "bootstrap": "~3.3.5"
+  }
+}
