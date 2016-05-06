@@ -27,10 +27,24 @@ angular.module('mobileGrub', ['ionic'])
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
-        url: '/home',
+        url: '/',
         templateUrl: 'views/home.html',
         controller: 'HomeCtrl'
-      });
-    
-    $urlRouterProvider.otherwise('/home');
+      })
+      .state('category', {
+        url: '/category/:id',
+        controller: 'CategoryCtrl',
+        templateUrl: 'views/category.html',
+        resolve: {
+          category: function($http, $stateParams) {
+            return $http({url: 'http://localhost:8001/api/categories/'+$stateParams.id}).then(function(result) {
+              return result.data;
+            })
+          }
+        }
+      })
+
+    ;
+
+    $urlRouterProvider.otherwise('/');
   });

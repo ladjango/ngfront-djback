@@ -1,0 +1,14 @@
+
+<ion-view view-title="{{ category.name }}">
+  <ion-content>
+    {{ category.description }}
+
+    <div class="list ">
+      <li class="item item-thumbnail-left" ng-repeat="menuItem in category.menu_items">
+        <img ng-src="http://127.0.0.1:8001/{{ menuItem.image }}">
+        <h2>{{menuItem.name}}</h2>
+        <p>{{ menuItem.description}}</p>
+      </li>
+    </div>
+  </ion-content>
+</ion-view>
